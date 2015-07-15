@@ -1,0 +1,45 @@
+--- ../bis-drmaa/slurm-drmaa-1.0.6/slurm_drmaa/util.c	2013-05-03 13:46:43.770193979 +0200
++++ ../drmaa/slurm-drmaa-1.0.6/slurm_drmaa/util.c	2013-05-03 14:03:57.617770853 +0200
+@@ -138,7 +138,8 @@
+ 	SLURM_NATIVE_MAIL_TYPE,
+ 	SLURM_NATIVE_NO_REQUEUE,
+ 	SLURM_NATIVE_EXCLUDE,
+-	SLURM_NATIVE_TMP
++	SLURM_NATIVE_TMP,
++	SLURM_NATIVE_WORKDIR
+ };
+ 
+ void
+@@ -352,7 +353,11 @@
+             		job_desc->job_min_tmp_disk = fsd_atoi(value);
+             		#endif
+ 			break;
+-	
++	        case SLURM_NATIVE_WORKDIR:
++			fsd_log_debug(("# workdir = %s", value));
++			job_desc->work_dir = fsd_strdup(value);
++			break;
++
+ 		default:
+ 			fsd_exc_raise_fmt(FSD_DRMAA_ERRNO_INVALID_ATTRIBUTE_VALUE,"Invalid attribute");
+ 	}
+@@ -460,6 +465,9 @@
+ 		}
+ 		else if(strcmp(name,"tmp") == 0) {
+ 			slurmdrmaa_add_attribute(job_desc,SLURM_NATIVE_TMP,value);
++	        }
++		else if(strcmp(name,"workdir") == 0) {
++			slurmdrmaa_add_attribute(job_desc,SLURM_NATIVE_WORKDIR,value);
+ 		} else {
+ 			fsd_exc_raise_fmt(FSD_DRMAA_ERRNO_INVALID_ATTRIBUTE_VALUE,
+ 					"Invalid native specification: %s (Unsupported option: --%s)",
+@@ -532,6 +540,9 @@
+ 					case 'x' :
+ 						slurmdrmaa_add_attribute(job_desc,SLURM_NATIVE_EXCLUDE, arg);
+ 						break;
++					case 'D' :
++						slurmdrmaa_add_attribute(job_desc,SLURM_NATIVE_WORKDIR, arg);
++						break;
+ 					default :
+ 							fsd_exc_raise_fmt(FSD_DRMAA_ERRNO_INVALID_ATTRIBUTE_VALUE,
+ 									"Invalid native specification: %s (Unsupported option: -%c)",

@@ -1,0 +1,9 @@
+Problems with the compilation of the Polish DRMAA:
+
+1) yum install bison (missing)
+
+2) wget ragel RPM
+
+3) create a link in /site/drmaa/slurm-drmaa-1.0.6/drmaa_utils/drma_utils
+
+ln -s /site/drmaa/slurm-drmaa-1.0.6/drmaa_utils/m4 m4

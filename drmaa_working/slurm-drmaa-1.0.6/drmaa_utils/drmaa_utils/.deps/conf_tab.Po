@@ -1,0 +1,111 @@
+conf_tab.o: conf_tab.c ../drmaa_utils/conf_impl.h ../config.h \
+ ../drmaa_utils/conf.h ../drmaa_utils/common.h ../drmaa_utils/compat.h \
+ /usr/include/sys/types.h /usr/include/features.h \
+ /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/time.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stddef.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/sigset.h \
+ /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/pthreadtypes.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stdarg.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stdbool.h \
+ ../drmaa_utils/exception.h /usr/include/setjmp.h \
+ /usr/include/bits/setjmp.h ../drmaa_utils/logging.h /usr/include/stdio.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ ../drmaa_utils/util.h /usr/include/sys/time.h /usr/include/string.h \
+ /usr/include/xlocale.h ../drmaa_utils/xmalloc.h \
+ ../drmaa_utils/conf_tab.h
+
+../drmaa_utils/conf_impl.h:
+
+../config.h:
+
+../drmaa_utils/conf.h:
+
+../drmaa_utils/common.h:
+
+../drmaa_utils/compat.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/time.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stddef.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/bits/byteswap.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stdarg.h:
+
+/usr/include/stdint.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/4.4.7/include/stdbool.h:
+
+../drmaa_utils/exception.h:
+
+/usr/include/setjmp.h:
+
+/usr/include/bits/setjmp.h:
+
+../drmaa_utils/logging.h:
+
+/usr/include/stdio.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/sys_errlist.h:
+
+../drmaa_utils/util.h:
+
+/usr/include/sys/time.h:
+
+/usr/include/string.h:
+
+/usr/include/xlocale.h:
+
+../drmaa_utils/xmalloc.h:
+
+../drmaa_utils/conf_tab.h:
