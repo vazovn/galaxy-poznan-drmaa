@@ -2,10 +2,19 @@ Problems with the compilation of the Polish DRMAA:
 
 1) yum install bison (missing)
 
+
+Check if this is necessary - try to compile without it
 2) wget ragel RPM (or use the one from the repo)
 
-Check if this is necessary
+3) Compile the slurm-drmaa :
 
-3) create a link in /site/drmaa/slurm-drmaa-1.0.6/drmaa_utils/drma_utils
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/slurm/lib64
+./configure --with-slurm-inc=/opt/slurm/include/  --with-slurm-lib=/opt/slurm/lib64/ --prefix=/site/drmaa/ --enable-debug
+make
+make install
+
+Check if this is necessary
+4) create a link in /site/drmaa/slurm-drmaa-1.0.6/drmaa_utils/drma_utils
 
 ln -s /site/drmaa/slurm-drmaa-1.0.6/drmaa_utils/m4 m4
